@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Revista Digital</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+    body {
+      background-color: #f4f4f4;
+      text-align: center;
+    }
+    .container {
+      max-width: 900px;
+      margin: 20px auto;
+      background: white;
+      padding: 20px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      border-radius: 10px;
+    }
+    .cover img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+    }
+    .content {
+      margin-top: 20px;
+    }
+    h1 {
+      font-size: 24px;
+      color: #333;
+    }
+    p {
+      font-size: 16px;
+      color: #666;
+      line-height: 1.6;
+    }
+    .menu-container {
+      margin-top: 20px;
+      background-color: #001f3f;
+      color: white;
+      padding: 15px;
+      border-radius: 5px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      position: relative;
+    }
+    .menu-container span {
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+    .menu-button {
+      background-color: #d1d1d1;
+      border: none;
+      padding: 10px;
+      cursor: pointer;
+      border-radius: 5px;
+      transition: background-color 0.3s;
+    }
+    .menu-button:hover {
+      background-color: #00ff00;
+    }
+    .menu-button div {
+      width: 25px;
+      height: 3px;
+      background-color: black;
+      margin: 5px 0;
+    }
+    .menu-list {
+      display: none;
+      background-color: white;
+      color: black;
+      position: absolute;
+      top: 60px;
+      width: 200px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      border-radius: 5px;
+      padding: 10px;
+      text-align: left;
+    }
+    .menu-list ul {
+      list-style: none;
+      padding: 0;
+    }
+    .menu-list li {
+      padding: 10px;
+      border-bottom: 1px solid #ddd;
+      cursor: pointer;
+    }
+    .menu-list li:hover {
+      background-color: #f4f4f4;
+    }
+
+    /* Tamaños por niveles */
+    .nivel-1 { background: #fff0f0; padding: 25px; font-size: 18px; }
+    .nivel-2 { background: #f0fff0; padding: 20px; font-size: 16px; }
+    .nivel-3 { background: #f0f8ff; padding: 15px; font-size: 15px; }
+    .nivel-4 { background: #fafafa; padding: 12px; font-size: 14px; }
+    .nivel-5 { background: #eeeeee; padding: 10px; font-size: 13px; }
+
+    footer {
+      margin-top: 30px;
+      font-size: 14px;
+      color: #888;
+      padding: 10px;
+      background: #f4f4f4;
+    }
+
+    @media (max-width: 600px) {
+      .container {
+        width: 90%;
+        padding: 10px;
+      }
+      h1 {
+        font-size: 20px;
+      }
+      p {
+        font-size: 14px;
+      }
+    }
+  </style>
+  <script>
+    function toggleMenu() {
+      var menu = document.getElementById("menuList");
+      menu.style.display = (menu.style.display === "none" || menu.style.display === "") ? "block" : "none";
+    }
+  </script>
+</head>
+<body>
+
+
+ <!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Speak Local – Revista Digital</title>
+
+  <!-- =======================
+       ESTILOS GENERALES (CSS)
+       ======================= -->
+  <style>
+
+    /* Reset básico para evitar estilos raros del navegador */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    /* Fondo general de la página */
+    body {
+      background-color: #f4f4f4;
+      text-align: center;
+    }
+
+    /* Contenedor principal */
+    .container {
+      max-width: 900px;
+      margin: 30px auto;
+      background: white;
+      padding: 25px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+      border-radius: 12px;
+    }
+
+    /* =======================
+       PORTADA
+       ======================= */
+    .cover img {
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    /* =======================
+       CONTENIDO PRINCIPAL
+       ======================= */
+    .content {
+      margin-top: 20px;
+    }
+
+    h1 {
+      font-size: 26px;
+      color: #001f3f;
+      margin-bottom: 10px;
+    }
+
+    .subtitle {
+      font-size: 18px;
+      color: #555;
+      margin-bottom: 15px;
+    }
+
+    p {
+      font-size: 16px;
+      color: #666;
+      line-height: 1.6;
+    }
+
+    /* =======================
+       MENÚ
+       ======================= */
+    .menu-container {
+      margin-top: 30px;
+      background-color: #001f3f;
+      color: white;
+      padding: 15px;
+      border-radius: 8px;
+      position: relative;
+    }
+
+    .menu-title {
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+
+    /* Botón hamburguesa */
+    .menu-button {
+      background-color: #d1d1d1;
+      border: none;
+      padding: 10px;
+      cursor: pointer;
+      border-radius: 6px;
+    }
+
+    .menu-button div {
+      width: 25px;
+      height: 3px;
+      background-color: black;
+      margin: 5px 0;
+    }
+
+    /* Lista desplegable */
+    .menu-list {
+      display: none;
+      background: white;
+      color: black;
+      margin-top: 10px;
+      border-radius: 6px;
+      padding: 10px;
+      text-align: left;
+    }
+
+    .menu-list ul {
+      list-style: none;
+    }
+
+    .menu-list li {
+      padding: 10px;
+      border-bottom: 1px solid #ddd;
+    }
+
+    .menu-list li:last-child {
+      border-bottom: none;
+    }
+
+    /* Links del menú */
+    .menu-list a {
+      text-decoration: none;
+      color: black;
+      display: block;
+    }
+
+    .menu-list a:hover {
+      color: #001f3f;
+      font-weight: bold;
+    }
+
+    /* =======================
+       FOOTER
+       ======================= */
+    footer {
+      margin-top: 30px;
+      font-size: 14px;
+      color: #888;
+    }
+
+    /* =======================
+       RESPONSIVE (MÓVIL)
+       ======================= */
+    @media (max-width: 600px) {
+      .container {
+        width: 90%;
+        padding: 15px;
+      }
+
+      h1 {
+        font-size: 22px;
+      }
+
+      p {
+        font-size: 14px;
+      }
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <!-- =======================
+       CONTENEDOR PRINCIPAL
+       ======================= -->
+  <div class="container">
+
+    <!-- PORTADA DE LA REVISTA -->
+    <div class="cover">
+      <!-- IMPORTANTE:
+           Idealmente cambia esta imagen a una local:
+           src="img/SPEAK-LOCAL-MARZO-2025.png"
+      -->
+      <img src="https://i.ibb.co/nN9tn9FR/SPEAK-LOCAL-MARZO-2025.png"
+           alt="Portada Revista Speak Local Marzo 2025"
+           loading="lazy">
+    </div>
+
+    <!-- CONTENIDO DE PRESENTACIÓN -->
+    <div class="content">
+      <h1>Welcome to Speak Local</h1>
+      <p class="subtitle">Your Monthly English Immersion Experience</p>
+      <p>
+        Explore featured articles and keep your English alive in a natural,
+        self-taught way. Discover culture, language and new expressions every month.
+      </p>
+    </div>
+
+    <!-- MENÚ DE ARTÍCULOS -->
+    <div class="menu-container">
+
+      <div class="menu-title">MENÚ DE LA REVISTA</div>
+
+      <!-- Botón que abre/cierra el menú -->
+      <button class="menu-button" id="menuToggle" aria-label="Abrir menú">
+        <div></div>
+        <div></div>
+        <div></div>
+      </button>
+
+      <!-- Lista desplegable -->
+      <div id="menuList" class="menu-list">
+        <ul>
+          <li>
+            <a href="https://revistacps.github.io/ART.-Jack-in-the-Green-July-2025/"
+               target="_blank"
+               rel="noopener noreferrer">
+              1. Jack in the Green
+            </a>
+          </li>
+
+          <li>
+            <a href="https://revistacps.github.io/ART.-Star-Wars-Day-July-2025/"
+               target="_blank"
+               rel="noopener noreferrer">
+              2. Star Wars Day
+            </a>
+          </li>
+
+          <li>
+            <a href="https://revistacps.github.io/ART.-Fluke-July-2025/"
+               target="_blank"
+               rel="noopener noreferrer">
+              3. Fluke
+            </a>
+          </li>
+
+          <li>
+            <a href="https://revistacps.github.io/ART.-Chelsea-Flower-July-2025/"
+               target="_blank"
+               rel="noopener noreferrer">
+              4. Chelsea Flower
+            </a>
+          </li>
+
+          <li>
+            <a href="https://revistacps.github.io/ART.-No-digas-I-want-July-2025/"
+               target="_blank"
+               rel="noopener noreferrer">
+              5. ¡No digas "I want"!
+            </a>
+          </li>
+
+          <li>6. Próximo Artículo (Próximamente)</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- PIE DE PÁGINA -->
+    <footer>
+      © 2026 Revista Speak Local · Todos los derechos reservados
+    </footer>
+
+  </div>
+
+  <!-- =======================
+       JAVASCRIPT (MENÚ)
+       ======================= -->
+  <script>
+    // Detecta el botón
+    const toggleButton = document.getElementById("menuToggle");
+    const menu = document.getElementById("menuList");
+
+    // Evento para mostrar / ocultar el menú
+    toggleButton.addEventListener("click", function () {
+      menu.style.display =
+        menu.style.display === "block" ? "none" : "block";
+    });
+  </script>
+
+</body>
+</html>>
+    <div class="content">
+      <h1>Bienvenido a Nuestra Revista Digital</h1>
+      <p>Explora artículos destacados (Desconecta el traductor para que la información este en Inglés). Con las últimas tendencias en un solo lugar. Practica y mantén vivo tu inglés de forma autodidacta.</p>
+    </div>
+    <div class="menu-container">
+      <span>MENÚ DE LA REVISTA</span>
+      <button class="menu-button" onclick="toggleMenu()">
+        <div></div><div></div><div></div>
+      </button>
+      <div id="menuList" class="menu-list">
+        <ul>
+          <li><a href="https://revistacps.github.io/ART.-Jack-in-the-Green-July-2025/" target="_blank" style="text-decoration: none; color: black;">1. Jack in the Green</a></li>
+          <li><a href="https://revistacps.github.io/ART.-Star-Wars-Day-July-2025/" target="_blank" style="text-decoration: none; color: black;">2. Star Wars Day</a></li>
+          <li><a href="https://revistacps.github.io/ART.-Fluke-July-2025/" target="_blank" style="text-decoration: none; color: black;">3. Fluke</a></li>
+          <li><a href="https://revistacps.github.io/ART.-Chelsea-Flower-July-2025/" target="_blank" style="text-decoration: none; color: black;">4. Chelsea Flower</a></li>
+          <li><a href="https://revistacps.github.io/ART.-No-digas-I-want-July-2025/" target="_blank" style="text-decoration: none; color: black;">5. ¡No digas "I want"! </a></li>
+          <li>6. Próximo Art. (Se dará a conocer en el grupo.)</li>
+        </ul>
+      </div>
+    </div>
+
+    <footer>
+      © 2026 Revista Speak Local · Todos los derechos reservados
+    </footer>
+  </div>
+</body>
+</html>
