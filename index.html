@@ -189,36 +189,36 @@
       <div id="menuList" class="menu-list">
         <ul>
           <li>
-            <a href="https://revistacps.github.io/ART.-Jack-in-the-Green-July-2025/">
-               
+            <a href="https://revistacps.github.io/ART.-Jack-in-the-Green-July-2025/"
+               target="_blank" rel="noopener noreferrer">
               1. Jack in the Green
             </a>
           </li>
 
           <li>
-            <a href="https://revistacps.github.io/ART.-Star-Wars-Day-July-2025/">
-              
+            <a href="https://revistacps.github.io/ART.-Star-Wars-Day-July-2025/"
+               target="_blank" rel="noopener noreferrer">
               2. Star Wars Day
             </a>
           </li>
 
           <li>
-            <a href="https://revistacps.github.io/ART.-Fluke-July-2025/">
-               
+            <a href="https://revistacps.github.io/ART.-Fluke-July-2025/"
+               target="_blank" rel="noopener noreferrer">
               3. Fluke
             </a>
           </li>
 
           <li>
-            <a href="https://revistacps.github.io/ART.-Chelsea-Flower-July-2025/">
-         
+            <a href="https://revistacps.github.io/ART.-Chelsea-Flower-July-2025/"
+               target="_blank" rel="noopener noreferrer">
               4. Chelsea Flower
             </a>
           </li>
 
           <li>
-            <a href="https://revistacps.github.io/ART.-No-digas-I-want-July-2025/">
-         
+            <a href="https://revistacps.github.io/ART.-No-digas-I-want-July-2025/"
+               target="_blank" rel="noopener noreferrer">
               5. ¡No digas "I want"!
             </a>
           </li>
@@ -231,39 +231,19 @@
     <footer>
       © 2026 Revista Speak Local · Todos los derechos reservados
     </footer>
-     
+
   </div>
 
   <!-- JAVASCRIPT MENÚ -->
-<script>
-  const toggleButton = document.getElementById("menuToggle");
-  const menu = document.getElementById("menuList");
+  <script>
+    const toggleButton = document.getElementById("menuToggle");
+    const menu = document.getElementById("menuList");
 
-  toggleButton.addEventListener("click", function () {
-    menu.style.display =
-      menu.style.display === "block" ? "none" : "block";
-  });
-</script>
-
-<!-- SCRIPT PARA MODO APP -->
-<script>
-document.querySelectorAll(".menu-list a").forEach(link => {
-    link.addEventListener("click", function(e) {
-        e.preventDefault();
-
-        const url = this.href;
-
-        if (window.parent !== window) {
-            window.parent.postMessage({
-                type: "openAppView",
-                url: url
-            }, "*");
-        } else {
-            window.location.href = url;
-        }
+    toggleButton.addEventListener("click", function () {
+      menu.style.display =
+        menu.style.display === "block" ? "none" : "block";
     });
-});
-</script>
+  </script>
 
 </body>
 </html>
